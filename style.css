@@ -1,0 +1,191 @@
+:root{
+  --bg1:#070714;
+  --bg2:#1a0f2e;
+
+  --card: rgba(255,255,255,.08);
+  --border: rgba(255,255,255,.16);
+
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.72);
+
+  --shadow: 0 30px 90px rgba(0,0,0,.55);
+
+  --accent1:#ff4da6;
+  --accent2:#ffd166;
+  --accent3:#7bdff2;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 700px at 12% 8%, rgba(255,77,166,.25), transparent 60%),
+    radial-gradient(1000px 600px at 90% 25%, rgba(123,223,242,.16), transparent 55%),
+    radial-gradient(900px 600px at 60% 95%, rgba(255,209,102,.12), transparent 55%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
+}
+
+.hidden{ display:none !important; }
+
+/* Layout */
+.wrap{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.card{
+  width:90%;
+  max-width:1000px;
+  background:var(--card);
+  border-radius:24px;
+  padding:25px;
+  backdrop-filter:blur(12px);
+  box-shadow:var(--shadow);
+}
+
+.content{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.left{ flex:1; }
+
+.right{
+  width:320px;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+h1{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+.message{
+  background:rgba(0,0,0,.25);
+  padding:18px;
+  border-radius:18px;
+  line-height:1.6;
+}
+
+.signature{
+  font-weight:bold;
+  font-size:18px;
+}
+
+/* FOTO */
+.photo{
+  position:relative;
+  height:380px;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+.photo-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 30%;
+  transition:transform .5s;
+}
+
+.photo:hover .photo-img{
+  transform:scale(1.05);
+}
+
+/* Player */
+.player{
+  position:fixed;
+  bottom:15px;
+  right:15px;
+  background:rgba(0,0,0,.5);
+  padding:12px;
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  backdrop-filter:blur(8px);
+}
+
+.p-btn{
+  padding:10px 14px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* Lock screen */
+.lock{
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,.75);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+.lock-card{
+  background:rgba(20,20,35,.9);
+  padding:28px;
+  border-radius:24px;
+  text-align:center;
+  width:320px;
+  box-shadow:var(--shadow);
+}
+
+.lock-title{
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.lock-sub{
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+.lock-input{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:12px;
+  border:none;
+  background:#222;
+  color:white;
+}
+
+.btn{
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent1),var(--accent2));
+  color:white;
+  font-weight:bold;
+}
+
+.lock-msg{
+  color:#ffd166;
+  font-weight:bold;
+  margin-top:10px;
+}

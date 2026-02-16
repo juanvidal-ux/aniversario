@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Feliz aniversário, meu amor 💖</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+<!-- TELA DE SENHA -->
+<div id="lock" class="lock">
+  <div class="lock-card">
+    <div class="lock-title">💖 Só para você</div>
+    <div class="lock-sub">Digite a senha para abrir sua surpresa.</div>
+
+    <input id="pass" class="lock-input" type="password" placeholder="Senha..." />
+    <button id="unlockBtn" class="btn btn-primary">Abrir ✨</button>
+
+    <p id="lockMsg" class="lock-msg"></p>
+    <p class="lock-hint">Dica: algo só de vocês 😉</p>
+  </div>
+</div>
+
+<!-- CONTEÚDO DO SITE -->
+<div id="app" class="hidden">
+
+  <!-- Áudio -->
+  <audio id="bgMusic" preload="auto" loop>
+    <source src="./musica.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="wrap">
+    <section class="card">
+      <header class="topbar">
+        <div class="chip">
+          <span class="dot"></span>
+          <span>🎉 Hoje é o seu dia</span>
+        </div>
+      </header>
+
+      <div class="content">
+        <article class="left">
+          <h1>Feliz aniversário, meu amor! 💖</h1>
+          <p class="subtitle">Feito com carinho — pra você sentir esse momento.</p>
+
+          <div class="message" id="message">
+            <p>Hoje é o dia da mulher incrível, linda e cheia de personalidade que conquistou meu coração.</p>
+
+            <p>
+              Cada minuto ao teu lado me faz feliz — e também me lembra os 10 anos de espera… rs.
+              Eu diria 15, mas o histórico diz 10, então vamos respeitar a versão oficial. 😄
+            </p>
+
+            <p>
+              Amor, que este novo ciclo venha cheio de alegria, saúde, conquistas e muitos momentos felizes…
+              de preferência ao meu lado, porque eu não pretendo sair de perto.
+            </p>
+
+            <p>Obrigado por tornar meus dias mais leves, divertidos e especiais.</p>
+            <p>Aproveite muito o seu dia, porque você merece tudo de melhor.</p>
+            <p>Que Deus te guarde com muita saúde e graça. Você é uma bênção na minha vida.</p>
+
+            <p class="signature">Te amo! 💖🎂</p>
+          </div>
+        </article>
+
+        <aside class="right">
+          <div class="photo">
+            <img class="photo-img" src="./foto.jpg" alt="Foto dela" />
+          </div>
+        </aside>
+      </div>
+
+      <footer class="footer">
+        <span>Com muito carinho, para você, do seu namorado que te ama, Juan Vidal.</span>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Player -->
+  <div class="player">
+    <button id="btnPlay" class="p-btn">▶</button>
+    <div class="p-meta">
+      <div class="p-title">Nossa música</div>
+      <div class="p-sub" id="pState">Te amo</div>
+    </div>
+    <input id="vol" type="range" min="0" max="100" value="80" />
+  </div>
+
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
