@@ -1,5 +1,5 @@
 // ===== SENHA DO SITE =====
-const SITE_PASSWORD = "02022026";
+const SITE_PASSWORD = "06022026";
 // =========================
 
 const lock = document.getElementById("lock");
